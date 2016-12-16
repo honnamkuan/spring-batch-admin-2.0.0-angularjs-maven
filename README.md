@@ -20,7 +20,7 @@ This is the standard Spring Boot configuration file used to specify environment 
 **batch-*.properties**  
 This file is used to configure your database.  The * is replaced with whatever the database type you're using.  This should match the value of the `ENVIRONMENT` property in the `application.properties` file.  This project comes with an HSQLDB preconfigured.
 
-### Building
+### Build and lauch application
 
 To build this project, is a two step process:
 
@@ -33,8 +33,8 @@ that:
 
 The result of this will place all the compiled client static resources into `src/main/resources/public`.
 
-### Compile and Launching the application
-Once the client has been built, you can compile and start up the application using spring-boot:run plugin goal.
+**Launching the Spring Boot application**
+Once the client has been built, you can compile and start up the application using **spring-boot:run** plugin goal.
 
 ### Sample jobs
 There are two sample jobs provided in this example.  One is XML based and can be found in `src/main/resources/META-INF/spring/batch/jobs`.  The other is a Java config based job.  The Java configured job (`job`), takes an optional parameter `fail` to indicate if it should fail or not.
