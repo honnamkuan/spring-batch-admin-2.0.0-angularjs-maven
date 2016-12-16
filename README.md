@@ -47,7 +47,11 @@ The front end for this project was generated using [Yeoman](http://yeoman.io) an
 
 The development profile makes this dual server configuration possible via the CORSFilter.  It is disabled by default and should not be run in a production environment.
 
+Screenshots:
+![d877e5cd20a0fe8e26641a882800d82b.png](https://pictr.com/images/2016/12/17/d877e5cd20a0fe8e26641a882800d82b.png)
 
+![6c385cff74835c5295b29e60b009d6be.png](https://pictr.com/images/2016/12/17/6c385cff74835c5295b29e60b009d6be.png)
 
+![db2f0b7c683c1fa025736a8c40f3419b.png](https://pictr.com/images/2016/12/17/db2f0b7c683c1fa025736a8c40f3419b.png)
 
 
