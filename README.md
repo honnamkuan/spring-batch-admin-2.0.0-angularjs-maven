@@ -22,16 +22,16 @@ This file is used to configure your database.  The * is replaced with whatever t
 
 ### Build and launch application
 
-To build this project, is a two step process:
+To start up this application, is a two step process:
 
 **Build the client**  
-1. Enable Maven Profile 'buildUI'  
+1. Enable Maven Profile `buildUI`  
 2. Perform a Maven Compile (Will take sometimes for first compile)
 
 The result of this will place all the compiled client static resources into `src/main/resources/public`.
 
-**Launching the Spring Boot application**  
-Once the client has been built, you can compile and start up the application using **spring-boot:run** plugin goal.
+**Build and launch the Spring Boot jar**  
+Once the client has been built, you can compile and start up the application using `spring-boot:run` plugin goal.
 
 ### Sample jobs
 There are two sample jobs provided in this example.  One is XML based and can be found in `src/main/resources/META-INF/spring/batch/jobs`.  The other is a Java config based job.  The Java configured job (`job`), takes an optional parameter `fail` to indicate if it should fail or not.
