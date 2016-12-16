@@ -20,20 +20,17 @@ This is the standard Spring Boot configuration file used to specify environment 
 **batch-*.properties**  
 This file is used to configure your database.  The * is replaced with whatever the database type you're using.  This should match the value of the `ENVIRONMENT` property in the `application.properties` file.  This project comes with an HSQLDB preconfigured.
 
-### Build and lauch application
+### Build and launch application
 
 To build this project, is a two step process:
 
 **Build the client**  
-The first time you build the front end, you'll need to install the dependencies.  To do 
-that:
-
-1. Activate Maven Profile 'buildUI'
+1. Enable Maven Profile 'buildUI'  
 2. Perform a Maven Compile (Will take sometimes for first compile)
 
 The result of this will place all the compiled client static resources into `src/main/resources/public`.
 
-**Launching the Spring Boot application**
+**Launching the Spring Boot application**  
 Once the client has been built, you can compile and start up the application using **spring-boot:run** plugin goal.
 
 ### Sample jobs
