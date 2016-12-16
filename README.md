@@ -9,7 +9,6 @@ Admin's REST endpoints.
 This project requires the following to be built:
 
 * Java 7 or higher
-* NPM 1.4.24 or higher
 
 ### Configuration
 
@@ -29,18 +28,13 @@ To build this project, is a two step process:
 The first time you build the front end, you'll need to install the dependencies.  To do 
 that:
 
-```
-$ cd client
-$ npm install  
-$ bower install
-```
-With the dependencies installed, you can compile the static resources with `$ grunt build`.  The result of this will place all the compiled static resources into `src/main/resources/public`.
+1. Activate Maven Profile 'buildUI'
+2. Perform a Maven Compile (Will take sometimes for first compile)
 
-**Building the executable jar**  
-Once the client has been built, you can build the executable jar file.  This is done via `$ ./gradlew build` from the root of the project.
+The result of this will place all the compiled client static resources into `src/main/resources/public`.
 
-### Launching the application
-Once the project has been built, you can launch the application via the command line `$ java -jar build/libs/spring-batch-admin-angularjs-0.1.0.jar`.  Once started, navigate your browser to [http://localhost:8080](http://localhost:8080) for the home page.
+### Compile and Launching the application
+Once the client has been built, you can compile and start up the application using spring-boot:run plugin goal.
 
 ### Sample jobs
 There are two sample jobs provided in this example.  One is XML based and can be found in `src/main/resources/META-INF/spring/batch/jobs`.  The other is a Java config based job.  The Java configured job (`job`), takes an optional parameter `fail` to indicate if it should fail or not.
