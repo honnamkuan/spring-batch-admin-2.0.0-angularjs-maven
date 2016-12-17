@@ -20,6 +20,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.hateoas.HypermediaAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 /**
  * <p>Spring Boot launching point for Spring Batch Admin.</p>
@@ -28,7 +30,12 @@ import org.springframework.boot.autoconfigure.web.MultipartAutoConfiguration;
  */
 @SpringBootApplication(exclude = {HypermediaAutoConfiguration.class, MultipartAutoConfiguration.class})
 @EnableBatchAdmin
-public class Main {
+public class Main extends SpringBootServletInitializer
+{
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(Main.class);
+	}
 
 	public static void main(String [] args) {
 		SpringApplication.run(Main.class, args);
